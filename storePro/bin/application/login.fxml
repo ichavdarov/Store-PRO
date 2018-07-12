@@ -17,9 +17,9 @@
 
 <AnchorPane fx:id="primaryPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="425.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LoginController">
    <children>
-      <AnchorPane fx:id="topPane" prefHeight="69.0" prefWidth="600.0" AnchorPane.bottomAnchor="356.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane fx:id="topPane" prefHeight="69.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Label layoutX="391.0" layoutY="8.0" prefHeight="41.0" prefWidth="209.0" text="STORE PRO" textFill="#fae500" textOverrun="CLIP" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="391.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="8.0">
+            <Label layoutX="391.0" layoutY="8.0" prefHeight="41.0" prefWidth="209.0" text="STORE PRO" textFill="#fae500" textOverrun="CLIP" AnchorPane.bottomAnchor="8.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="8.0">
                <font>
                   <Font name="System Bold Italic" size="36.0" />
                </font>
@@ -36,19 +36,19 @@
             </Label>
          </children>
       </AnchorPane>
-      <Label layoutX="127.0" layoutY="94.0" text="Login to your account" AnchorPane.bottomAnchor="278.0" AnchorPane.leftAnchor="127.0" AnchorPane.rightAnchor="107.0" AnchorPane.topAnchor="94.0">
+      <Label layoutX="127.0" layoutY="94.0" text="Login to your account" AnchorPane.leftAnchor="127.0" AnchorPane.rightAnchor="107.0" AnchorPane.topAnchor="94.0">
          <font>
             <Font name="System Bold Italic" size="36.0" />
          </font>
       </Label>
-      <Label layoutX="16.0" layoutY="185.0" text="Username :" />
-      <Label layoutX="16.0" layoutY="224.0" text="Password:" />
-      <TextField fx:id="txtUsername" layoutX="86.0" layoutY="181.0" prefHeight="25.0" prefWidth="498.0" />
-      <Button fx:id="btnLogIn" layoutX="532.0" layoutY="272.0" mnemonicParsing="false" onAction="#handleBtnLogInAction" text="Log in" />
-      <Label layoutX="16.0" layoutY="276.0" text="Don't have account?" />
-      <Label layoutX="16.0" layoutY="304.0" text="New shop?" />
+      <Label layoutX="16.0" layoutY="185.0" text="Username :" AnchorPane.leftAnchor="16.0" />
+      <Label layoutX="16.0" layoutY="224.0" text="Password:" AnchorPane.leftAnchor="16.0" />
+      <TextField fx:id="txtUsername" layoutX="86.0" layoutY="181.0" prefHeight="25.0" prefWidth="498.0" AnchorPane.rightAnchor="16.0" />
+      <Button fx:id="btnLogIn" layoutX="532.0" layoutY="272.0" mnemonicParsing="false" onAction="#handleBtnLogInAction" text="Log in" AnchorPane.rightAnchor="19.0" />
+      <Label layoutX="16.0" layoutY="276.0" text="Don't have account?" AnchorPane.leftAnchor="16.0" />
+      <Label layoutX="16.0" layoutY="304.0" text="New shop?" AnchorPane.leftAnchor="16.0" />
       <Hyperlink fx:id="hplRegister" layoutX="141.0" layoutY="273.0" onAction="#handleRegisterHplAction" text="Click here" />
       <Hyperlink fx:id="hplShopRegister" layoutX="141.0" layoutY="301.0" onAction="#handleRegisterShopHplAction" text="Click here" />
-      <PasswordField fx:id="passField" layoutX="86.0" layoutY="220.0" prefHeight="25.0" prefWidth="498.0" />
+      <PasswordField fx:id="passField" layoutX="86.0" layoutY="220.0" prefHeight="25.0" prefWidth="498.0" AnchorPane.rightAnchor="16.0" />
    </children>
 </AnchorPane>

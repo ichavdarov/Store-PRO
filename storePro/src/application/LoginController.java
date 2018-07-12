@@ -19,38 +19,42 @@ import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
 import javafx.stage.Stage;
 public class LoginController implements Initializable{
-@FXML private Button btnLogIn;
-@FXML private Hyperlink hplRegister;
-@FXML private Hyperlink hplShopRegister;
-@FXML private TextField txtUsername;
-@FXML private PasswordField passField;
-@FXML private AnchorPane topPane;
-@Override
-public void initialize(URL url, ResourceBundle rb) { 
-	topPane.setStyle("-fx-background-color: #0000ff;");
-}
-@FXML protected void handleRegisterHplAction(ActionEvent event) {
-
-	StageSetter setter=new StageSetter();
-	setter.setStage("register.fxml", hplRegister,"Register form");
-}
-@FXML protected void handleRegisterShopHplAction(ActionEvent event) {
-
-	StageSetter setter=new StageSetter();
-	setter.setStage("registerShop.fxml", hplShopRegister,"New shop registration form");
-}
-@FXML protected void handleBtnLogInAction(ActionEvent event) {
-	MySqlConnector connector=new MySqlConnector();
-	AllertMessage allert=new AllertMessage();
+	@FXML private Button btnLogIn;
+	@FXML private Hyperlink hplRegister;
+	@FXML private Hyperlink hplShopRegister;
+	@FXML private TextField txtUsername;
+	@FXML private PasswordField passField;
+	@FXML private AnchorPane topPane;
+	@Override
+	public void initialize(URL url, ResourceBundle rb) { 
+		topPane.setStyle("-fx-background-color: #0000ff;");
 	
-	if((connector.LogIn(/*txtUsername.getText()*/"dancho",/* passField.getText()*/"baidancho"))) {
-		allert.showAlert(Alert.AlertType.INFORMATION, btnLogIn.getScene().getWindow(), "log in successfull", "log in successfull");
-	StageSetter setter=new StageSetter();
-	setter.setStage("MainScreen.fxml", btnLogIn,"Main screen");
+	
 	}
-	else
-		allert.showAlert(Alert.AlertType.ERROR, btnLogIn.getScene().getWindow(),"Wrong username or password!", "Wrong username or password!");
-}
+	
+	@FXML protected void handleRegisterHplAction(ActionEvent event) {
+
+		StageSetter setter=new StageSetter();
+		setter.setStage("register.fxml", hplRegister,"Register form");
+	}
+	@FXML protected void handleRegisterShopHplAction(ActionEvent event) {
+
+		StageSetter setter=new StageSetter();
+		setter.setStage("registerShop.fxml", hplShopRegister,"New shop registration form");
+	}
+	@FXML protected void handleBtnLogInAction(ActionEvent event) {
+		MySqlConnector connector=new MySqlConnector();
+		AllertMessage allert=new AllertMessage();
+	
+		if((connector.LogIn(/*txtUsername.getText()*/"dancho",/* passField.getText()*/"baidancho"))) {
+			allert.showAlert(Alert.AlertType.INFORMATION, btnLogIn.getScene().getWindow(), "log in successfull", "log in successfull");
+			StageSetter setter=new StageSetter();
+			setter.setStage("MainScreen.fxml", btnLogIn,"Main screen");
+		}
+		else
+			allert.showAlert(Alert.AlertType.ERROR, btnLogIn.getScene().getWindow(),"Wrong username or password!", "Wrong username or password!");
+	}
+
 }
 
 

@@ -27,6 +27,7 @@ public class StageSetter {
 	       scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 	       stage.setScene(scene);
 	       stage.setTitle("stageName");
+	       stage.centerOnScreen();
 	       stage.show();
 	       
 
